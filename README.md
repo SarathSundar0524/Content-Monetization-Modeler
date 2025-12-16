@@ -21,8 +21,8 @@ Social Media Analytics
 - Identified missing values, duplicates, and potential outliers
 
 ### Data Cleaning
-- Removed duplicate records (~2%)
-- Handled missing values (~5%) using statistical imputation
+- Removed duplicate records 
+- Handled missing values using statistical imputation
 - Ensured data consistency and correct data types
 
 ### Exploratory Data Analysis (EDA)
