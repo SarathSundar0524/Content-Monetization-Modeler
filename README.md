@@ -1,175 +1,119 @@
 # Content Monetization Modeler
 
-## Project Overview
-As video creators and media companies increasingly rely on platforms like YouTube for income, accurately predicting ad revenue is critical for business planning and content strategy.  
-This project builds a **regression-based predictive model** to estimate YouTube ad revenue for individual videos using performance and contextual features, and demonstrates the results through a **Streamlit web application**.
+## What I Built
+I built an **end-to-end Content Monetization Modeler** that predicts **YouTube ad revenue** using video performance and contextual data.  
+The project covers the complete data science workflow — from raw data analysis to model deployment using **Streamlit**.
 
-The solution covers the complete data science lifecycle — from data cleaning and exploratory analysis to model evaluation and deployment.
+The final output is a **production-ready regression model** that allows users to input video metrics and get an estimated ad revenue in real time.
 
 ---
 
 ## Domain
-**Social Media Analytics**
+Social Media Analytics
 
 ---
 
-## Problem Statement
-Build a **Linear Regression–based predictive system** to estimate YouTube ad revenue (`ad_revenue_usd`) for videos using historical performance and contextual data, and deploy the model in a simple, interactive Streamlit application.
+## Work Done in This Project
 
----
+### Data Understanding & Exploration
+- Loaded and explored a large-scale dataset (~122K rows)
+- Analyzed distributions, trends, and correlations across engagement and revenue
+- Identified missing values, duplicates, and potential outliers
 
-## Business Use Cases
-- **Content Strategy Optimization**  
-  Helps creators identify content characteristics that generate higher revenue.
-- **Revenue Forecasting**  
-  Enables media companies to estimate income from upcoming uploads.
-- **Creator Support Tools**  
-  Can be integrated into analytics platforms for YouTubers.
-- **Ad Campaign Planning**  
-  Allows advertisers to forecast ROI based on performance metrics.
+### Data Cleaning
+- Removed duplicate records (~2%)
+- Handled missing values (~5%) using statistical imputation
+- Ensured data consistency and correct data types
 
----
+### Exploratory Data Analysis (EDA)
+- Performed univariate and multivariate analysis
+- Visualized feature distributions and revenue patterns
+- Used correlation heatmaps to identify key revenue drivers
+- Inspected skewness and kurtosis for numerical stability
 
-## Dataset Information
-- **Name:** YouTube Monetization Modeler  
-- **Format:** CSV  
-- **Size:** ~122,000 rows  
-- **Source:** Synthetic dataset created for learning purposes  
-- **Target Variable:** `ad_revenue_usd`
+### Feature Engineering
+- Created business-driven features such as:
+  - **Engagement Rate** = (likes + comments) / views
+  - **Average Watch Time per View**
+- Improved predictive strength using meaningful derived metrics
 
-### Dataset Description
-Each row represents performance metrics for a specific video on a specific day.
+### Model Development
+- Trained and evaluated **multiple regression models**:
+  - Linear Regression
+  - Decision Tree Regressor
+  - Random Forest Regressor
+  - Gradient Boosting Regressor
+  - XGBoost Regressor
+- Compared models using standard regression metrics
+- Selected **Linear Regression** for its strong performance and interpretability
 
-Key columns include:
-- `video_id` – Unique video identifier  
-- `date` – Upload or report date  
-- `views`, `likes`, `comments` – Engagement metrics  
-- `watch_time_minutes`, `video_length_minutes` – Content engagement  
-- `subscribers` – Channel subscriber count  
-- `category`, `device`, `country` – Contextual features  
-- `ad_revenue_usd` – Revenue generated (target)
-
----
-
-## Preprocessing Requirements
-- Handle ~5% missing values in key columns
-- Remove ~2% duplicated records
-- Encode categorical variables (`category`, `device`, `country`)
-- Normalize or scale numerical features where required
-- Detect and treat outliers
-
----
-
-## Project Approach
-
-### 1. Data Understanding
-- Load and inspect dataset
-- Validate schema and data types
-
-### 2. Exploratory Data Analysis (EDA)
-- Identify trends and distributions
-- Analyze correlations with revenue
-- Detect anomalies and outliers
-- Visualize engagement vs revenue patterns
-
-### 3. Data Preprocessing
-- Missing value handling
-- Duplicate removal
-- Categorical encoding
-- Feature scaling
-
-### 4. Feature Engineering
-- Create derived features such as:
-  - Engagement rate = (likes + comments) / views
-- Improve predictive signal quality
-
-### 5. Model Building
-- Train and compare **5 different regression models**
-- Predict `ad_revenue_usd`
-- Identify the most effective model
-
-### 6. Model Evaluation
-- Evaluate using:
+### Model Evaluation
+- Evaluated models using:
   - R² Score
-  - Root Mean Squared Error (RMSE)
-  - Mean Absolute Error (MAE)
+  - RMSE
+  - MAE
+- Achieved high predictive accuracy (R² ≈ 0.95)
 
-### 7. Streamlit App Development
-- Interactive revenue prediction
-- Input-based forecasting
-- Basic visual analytics and insights
-
-### 8. Interpretation & Insights
-- Identify key drivers of ad revenue
-- Translate model outputs into business insights
+### Model Deployment
+- Built a **Streamlit web application** for interactive usage
+- Enabled real-time ad revenue prediction from user inputs
+- Integrated feature engineering logic into the app
+- Saved and loaded the trained model using `joblib`
 
 ---
 
-## Results
-- A trained and evaluated regression model for ad revenue prediction
-- A cleaned and well-processed dataset
-- Actionable insights on factors influencing YouTube ad revenue
-- A functional Streamlit application for interactive testing
+## Dataset Overview
+- Dataset: YouTube Monetization Modeler
+- Format: CSV
+- Size: ~122,000 rows
+- Type: Synthetic (for learning purposes)
+- Target Variable: `ad_revenue_usd`
+
+Each row represents daily performance metrics of a video, including:
+- Views, likes, comments
+- Watch time and video length
+- Subscriber count
+- Category, device, and country context
 
 ---
 
-## Evaluation Metrics
-- R² Score
-- Root Mean Squared Error (RMSE)
-- Mean Absolute Error (MAE)
-- Code quality and documentation
-- Depth of EDA and insights
-- Streamlit app usability and functionality
+## Results Achieved
+- Built a reliable regression model to predict ad revenue
+- Identified key factors influencing monetization:
+  - Views and watch time are the strongest drivers
+  - Engagement rate improves revenue predictability
+- Delivered a clean, interactive Streamlit application
+- Created a reusable modeling pipeline suitable for real-world deployment
 
 ---
 
-## Technical Tags
-Linear Regression, EDA, Feature Engineering, Pandas, Scikit-learn, Outlier Detection, Missing Value Handling, Machine Learning, Data Visualization, Streamlit, Model Evaluation
-
----
-
-## Project Deliverables
-- Jupyter Notebook or Python scripts containing:
-  - Full EDA
-  - Data preprocessing
-  - Model building
-  - Evaluation and insights
-- Streamlit application showcasing:
-  - Revenue prediction from user inputs
-  - Visual analytics
-- README with project overview and execution steps
-
----
-
-## Skills Gained
-- Regression Models
-- Predictive Modeling
+## Skills Gained From This Project
+- Regression Modeling
+- Predictive Analytics
 - Feature Engineering
-- Data Cleaning
+- Data Cleaning & Preprocessing
 - Exploratory Data Analysis (EDA)
 - Regression Metrics (R², RMSE, MAE)
+- Model Comparison & Selection
 - Data Visualization
-- Streamlit
 - Python
-- Pandas
+- Pandas & NumPy
 - Scikit-learn
 - Categorical Encoding
 - Outlier Detection
 - Missing Value Handling
+- Streamlit Application Development
+- Model Deployment using Joblib
 
 ---
 
-## Project Guidelines
-- Follow clean coding practices
-- Use Git/GitHub for version control
-- Avoid hardcoded file paths
-- Include markdown explanations and comments
-- Add basic error handling
-- Ensure Streamlit app runs end-to-end without errors
+## Tech Stack
+Python, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Streamlit
 
 ---
 
 ## How to Run
 ```bash
 pip install -r requirements.txt
-streamlit run app/app.py
+streamlit run content.py
+
