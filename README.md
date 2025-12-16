@@ -13,24 +13,6 @@ The solution covers the complete data science lifecycle — from data cleaning a
 
 ---
 
-## Skills Gained
-- Regression Models
-- Predictive Modeling
-- Feature Engineering
-- Data Cleaning
-- Exploratory Data Analysis (EDA)
-- Regression Metrics (R², RMSE, MAE)
-- Data Visualization
-- Streamlit
-- Python
-- Pandas
-- Scikit-learn
-- Categorical Encoding
-- Outlier Detection
-- Missing Value Handling
-
----
-
 ## Problem Statement
 Build a **Linear Regression–based predictive system** to estimate YouTube ad revenue (`ad_revenue_usd`) for videos using historical performance and contextual data, and deploy the model in a simple, interactive Streamlit application.
 
@@ -156,6 +138,24 @@ Linear Regression, EDA, Feature Engineering, Pandas, Scikit-learn, Outlier Detec
   - Revenue prediction from user inputs
   - Visual analytics
 - README with project overview and execution steps
+
+---
+
+## Skills Gained
+- Regression Models
+- Predictive Modeling
+- Feature Engineering
+- Data Cleaning
+- Exploratory Data Analysis (EDA)
+- Regression Metrics (R², RMSE, MAE)
+- Data Visualization
+- Streamlit
+- Python
+- Pandas
+- Scikit-learn
+- Categorical Encoding
+- Outlier Detection
+- Missing Value Handling
 
 ---
 
